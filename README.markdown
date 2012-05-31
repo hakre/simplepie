@@ -1,9 +1,14 @@
 # SimplePie
 
+Feed library for PHP. This is the legacy 1.2.x version with legacy PHP 5 support.
+
+PHP Version: 5.2.x
+
 ## Authors and contributors
 
 ### Current
 * [Ryan McCue](http://ryanmccue.info) (Maintainer, support)
+* [hakre](http://hakre.wordpress.com) (Branch Maintainer, integration)
 
 ### Alumni
 * [Ryan Parman](http://ryanparman.com) (Creator, developer, evangelism, support)
@@ -20,17 +25,15 @@ For a complete list of contributors:
 
 ## License
 
-[New BSD license](http://www.opensource.org/licenses/bsd-license.php)
-
+[BSD-3-Clause](http://spdx.org/licenses/BSD-3-Clause), see LICENSE.txt
 
 ## Project status
 
 SimplePie is currently maintained by Ryan McCue.
 
-SimplePie is currently in "low-power mode." If the community decides that SimplePie is a valuable tool, then the community will come together to maintain it into the future.
+This branch of SimplePie has been initialized for legacy support and WordPress integration.
 
 If you're interested in getting involved with SimplePie, please get in touch with Ryan McCue.
-
 
 ## What comes in the package?
 
