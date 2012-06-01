@@ -567,12 +567,11 @@ class Unit_Test2_Files
 	/**
 	 * Get a list of files/folders within $dir
 	 *
-	 * @static
 	 * @access public
 	 * @param string $dir Folder to get listing for
 	 * @return array
 	 */
-	function get_files($dir)
+	static function get_files($dir)
 	{
 		$files = array();
 		if ($dh = opendir($dir))
@@ -600,13 +599,12 @@ class Unit_Test2_Files
 	/**
 	 * Sort files/folders with files listed before inner folders
 	 *
-	 * @static
 	 * @access public
 	 * @param string $a File/folder 1
 	 * @param string $b File/folder 2
 	 * @return int
 	 */
-	function sort_files($a, $b)
+	static function sort_files($a, $b)
 	{
 		if (is_dir($a) && is_dir($b))
 		{
