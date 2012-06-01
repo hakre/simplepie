@@ -834,15 +834,15 @@ class SimplePie
 	 * Provides an instance of SimplePie_File to use as a feed
 	 *
 	 * @access public
-	 * @param object &$file Instance of SimplePie_File (or subclass)
+	 * @param object $file Instance of SimplePie_File (or subclass)
 	 * @return bool True on success, false on failure
 	 */
-	function set_file(&$file)
+	function set_file($file)
 	{
 		if (is_a($file, 'SimplePie_File'))
 		{
 			$this->feed_url = $file->url;
-			$this->file =& $file;
+			$this->file = $file;
 			return true;
 		}
 		return false;
@@ -1631,7 +1631,7 @@ class SimplePie
 				{
 					if (is_a($this->file, 'SimplePie_File') && $this->file->url === $this->feed_url)
 					{
-						$file =& $this->file;
+						$file = $this->file;
 					}
 					else
 					{
@@ -3009,7 +3009,7 @@ class SimplePie
 					$this->data['ordered_items'] = $this->data['items'];
 					if ($do_sort)
 					{
-						usort($this->data['ordered_items'], array(&$this, 'sort_items'));
+						usort($this->data['ordered_items'], array($this, 'sort_items'));
 					}
 				}
 				$items = $this->data['ordered_items'];
@@ -11849,7 +11849,7 @@ class SimplePie_IRI
 	function replace_invalid_with_pct_encoding($string, $valid_chars, $case = SIMPLEPIE_SAME_CASE, $iprivate = false)
 	{
 		// Normalize as many pct-encoded sections as possible
-		$string = preg_replace_callback('/(?:%[A-Fa-f0-9]{2})+/', array(&$this, 'remove_iunreserved_percent_encoded'), $string);
+		$string = preg_replace_callback('/(?:%[A-Fa-f0-9]{2})+/', array($this, 'remove_iunreserved_percent_encoded'), $string);
 
 		// Replace invalid percent characters
 		$string = preg_replace('/%(?![A-Fa-f0-9]{2})/', '%25', $string);
@@ -13288,7 +13288,7 @@ class SimplePie_Parse_Date
 
 		foreach ($this->built_in as $method)
 		{
-			if (($returned = call_user_func(array(&$this, $method), $date)) !== false)
+			if (($returned = call_user_func(array($this, $method), $date)) !== false)
 			{
 				return $returned;
 			}
@@ -14279,9 +14279,9 @@ class SimplePie_Locator
 	var $max_checked_feeds = 10;
 	var $content_type_sniffer_class = 'SimplePie_Content_Type_Sniffer';
 
-	function SimplePie_Locator(&$file, $timeout = 10, $useragent = null, $file_class = 'SimplePie_File', $max_checked_feeds = 10, $content_type_sniffer_class = 'SimplePie_Content_Type_Sniffer')
+	function SimplePie_Locator($file, $timeout = 10, $useragent = null, $file_class = 'SimplePie_File', $max_checked_feeds = 10, $content_type_sniffer_class = 'SimplePie_Content_Type_Sniffer')
 	{
-		$this->file =& $file;
+		$this->file = $file;
 		$this->file_class = $file_class;
 		$this->useragent = $useragent;
 		$this->timeout = $timeout;
@@ -14340,7 +14340,7 @@ class SimplePie_Locator
 		return null;
 	}
 
-	function is_feed(&$file)
+	function is_feed($file)
 	{
 		if ($file->method & SIMPLEPIE_FILE_SOURCE_REMOTE)
 		{
@@ -15077,7 +15077,7 @@ class SimplePie_Sanitize
 						$pcre = "/<($tag)" . SIMPLEPIE_PCRE_HTML_ATTRIBUTE . "(>(.*)<\/$tag" . SIMPLEPIE_PCRE_HTML_ATTRIBUTE . '>|(\/)?>)/siU';
 						while (preg_match($pcre, $data))
 						{
-							$data = preg_replace_callback($pcre, array(&$this, 'do_strip_htmltags'), $data);
+							$data = preg_replace_callback($pcre, array($this, 'do_strip_htmltags'), $data);
 						}
 					}
 				}
