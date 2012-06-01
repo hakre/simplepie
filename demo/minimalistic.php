@@ -1,19 +1,6 @@
 <?php
 
-function microtime_float()
-{
-	if (version_compare(phpversion(), '5.0.0', '>='))
-	{
-		return microtime(true);
-	}
-	else
-	{
-		list($usec, $sec) = explode(' ', microtime());
-		return ((float) $usec + (float) $sec);
-	}
-}
-
-$start = microtime_float();
+$start = microtime(true);
 
 include('../simplepie.inc');
 
@@ -131,7 +118,7 @@ form#sp_form input.text {
 
 	<div id="footer">
 		Powered by <?php echo SIMPLEPIE_LINKBACK; ?>, a product of <a href="http://www.skyzyx.com">Skyzyx Technologies</a>.<br />
-		Page created in <?php echo round(microtime_float()-$start, 3); ?> seconds.
+		Page created in <?php echo round(microtime(true)-$start, 3); ?> seconds.
 	</div>
 </body>
 </html>
