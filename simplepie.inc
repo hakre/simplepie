@@ -1453,8 +1453,8 @@ class SimplePie
 	 * Set the handler to enable the display of cached favicons.
 	 *
 	 * @access public
-	 * @param str $page Web-accessible path to the handler_favicon.php file.
-	 * @param str $qs The query string that the value should be passed to.
+	 * @param string $page Web-accessible path to the handler_favicon.php file.
+	 * @param string $qs The query string that the value should be passed to.
 	 */
 	function set_favicon_handler($page = false, $qs = 'i')
 	{
@@ -1472,8 +1472,8 @@ class SimplePie
 	 * Set the handler to enable the display of cached images.
 	 *
 	 * @access public
-	 * @param str $page Web-accessible path to the handler_image.php file.
-	 * @param str $qs The query string that the value should be passed to.
+	 * @param string $page Web-accessible path to the handler_image.php file.
+	 * @param string $qs The query string that the value should be passed to.
 	 */
 	function set_image_handler($page = false, $qs = 'i')
 	{
@@ -9275,16 +9275,16 @@ class SimplePie_Misc
 	 *
 	 * @access public
 	 * @see SimplePie::get_favicon()
-	 * @param str $identifier_url URL that is used to identify the content.
+	 * @param string $identifier_url URL that is used to identify the content.
 	 * This may or may not be the actual URL of the live content.
-	 * @param str $cache_location Location of SimplePie's cache.  Defaults
+	 * @param string $cache_location Location of SimplePie's cache.  Defaults
 	 * to './cache'.
-	 * @param str $cache_extension The file extension that the file was
+	 * @param string $cache_extension The file extension that the file was
 	 * cached with.  Defaults to 'spc'.
-	 * @param str $cache_class Name of the cache-handling class being used
+	 * @param string $cache_class Name of the cache-handling class being used
 	 * in SimplePie.  Defaults to 'SimplePie_Cache', and should be left
 	 * as-is unless you've overloaded the class.
-	 * @param str $cache_name_function Obsolete. Exists for backwards
+	 * @param string $cache_name_function Obsolete. Exists for backwards
 	 * compatibility reasons only.
 	 */
 	function display_cached_file($identifier_url, $cache_location = './cache', $cache_extension = 'spc', $cache_class = 'SimplePie_Cache', $cache_name_function = 'md5')
