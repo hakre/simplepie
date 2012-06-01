@@ -7786,7 +7786,7 @@ class SimplePie_File
 					}
 					if (!$info['timed_out'])
 					{
-						$parser = newSimplePie_HTTP_Parser($this->headers);
+						$parser = new SimplePie_HTTP_Parser($this->headers);
 						if ($parser->parse())
 						{
 							$this->headers = $parser->headers;
