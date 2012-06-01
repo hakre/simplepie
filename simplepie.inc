@@ -1022,7 +1022,7 @@ class SimplePie
 	 */
 	function set_cache_class($class = 'SimplePie_Cache')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Cache'))
+		if (is_subclass_of($class, 'SimplePie_Cache'))
 		{
 			$this->cache_class = $class;
 			return true;
@@ -1041,7 +1041,7 @@ class SimplePie
 	 */
 	function set_locator_class($class = 'SimplePie_Locator')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Locator'))
+		if (is_subclass_of($class, 'SimplePie_Locator'))
 		{
 			$this->locator_class = $class;
 			return true;
@@ -1060,7 +1060,7 @@ class SimplePie
 	 */
 	function set_parser_class($class = 'SimplePie_Parser')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Parser'))
+		if (is_subclass_of($class, 'SimplePie_Parser'))
 		{
 			$this->parser_class = $class;
 			return true;
@@ -1079,7 +1079,7 @@ class SimplePie
 	 */
 	function set_file_class($class = 'SimplePie_File')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_File'))
+		if (is_subclass_of($class, 'SimplePie_File'))
 		{
 			$this->file_class = $class;
 			return true;
@@ -1098,7 +1098,7 @@ class SimplePie
 	 */
 	function set_sanitize_class($class = 'SimplePie_Sanitize')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Sanitize'))
+		if (is_subclass_of($class, 'SimplePie_Sanitize'))
 		{
 			$this->sanitize = new $class;
 			return true;
@@ -1117,7 +1117,7 @@ class SimplePie
 	 */
 	function set_item_class($class = 'SimplePie_Item')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Item'))
+		if (is_subclass_of($class, 'SimplePie_Item'))
 		{
 			$this->item_class = $class;
 			return true;
@@ -1136,7 +1136,7 @@ class SimplePie
 	 */
 	function set_author_class($class = 'SimplePie_Author')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Author'))
+		if (is_subclass_of($class, 'SimplePie_Author'))
 		{
 			$this->author_class = $class;
 			return true;
@@ -1155,7 +1155,7 @@ class SimplePie
 	 */
 	function set_category_class($class = 'SimplePie_Category')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Category'))
+		if (is_subclass_of($class, 'SimplePie_Category'))
 		{
 			$this->category_class = $class;
 			return true;
@@ -1174,7 +1174,7 @@ class SimplePie
 	 */
 	function set_enclosure_class($class = 'SimplePie_Enclosure')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Enclosure'))
+		if (is_subclass_of($class, 'SimplePie_Enclosure'))
 		{
 			$this->enclosure_class = $class;
 			return true;
@@ -1193,7 +1193,7 @@ class SimplePie
 	 */
 	function set_caption_class($class = 'SimplePie_Caption')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Caption'))
+		if (is_subclass_of($class, 'SimplePie_Caption'))
 		{
 			$this->caption_class = $class;
 			return true;
@@ -1212,7 +1212,7 @@ class SimplePie
 	 */
 	function set_copyright_class($class = 'SimplePie_Copyright')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Copyright'))
+		if (is_subclass_of($class, 'SimplePie_Copyright'))
 		{
 			$this->copyright_class = $class;
 			return true;
@@ -1231,7 +1231,7 @@ class SimplePie
 	 */
 	function set_credit_class($class = 'SimplePie_Credit')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Credit'))
+		if (is_subclass_of($class, 'SimplePie_Credit'))
 		{
 			$this->credit_class = $class;
 			return true;
@@ -1250,7 +1250,7 @@ class SimplePie
 	 */
 	function set_rating_class($class = 'SimplePie_Rating')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Rating'))
+		if (is_subclass_of($class, 'SimplePie_Rating'))
 		{
 			$this->rating_class = $class;
 			return true;
@@ -1269,7 +1269,7 @@ class SimplePie
 	 */
 	function set_restriction_class($class = 'SimplePie_Restriction')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Restriction'))
+		if (is_subclass_of($class, 'SimplePie_Restriction'))
 		{
 			$this->restriction_class = $class;
 			return true;
@@ -1288,7 +1288,7 @@ class SimplePie
 	 */
 	function set_content_type_sniffer_class($class = 'SimplePie_Content_Type_Sniffer')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Content_Type_Sniffer'))
+		if (is_subclass_of($class, 'SimplePie_Content_Type_Sniffer'))
 		{
 			$this->content_type_sniffer_class = $class;
 			return true;
@@ -1307,7 +1307,7 @@ class SimplePie
 	 */
 	function set_source_class($class = 'SimplePie_Source')
 	{
-		if (SimplePie_Misc::is_subclass_of($class, 'SimplePie_Source'))
+		if (is_subclass_of($class, 'SimplePie_Source'))
 		{
 			$this->source_class = $class;
 			return true;
@@ -10803,36 +10803,12 @@ class SimplePie_Misc
 
 	static function is_subclass_of($class1, $class2)
 	{
+		trigger_error(__FUNCTION__ . ' is deprecated. Please use is_subclass_of directly.', E_USER_NOTICE);
 		if (func_num_args() !== 2)
 		{
-			trigger_error('Wrong parameter count for SimplePie_Misc::is_subclass_of()', E_USER_WARNING);
+			trigger_error('Wrong parameter count for is_subclass_of()', E_USER_WARNING);
 		}
-		elseif (version_compare(PHP_VERSION, '5.0.3', '>=') || is_object($class1))
-		{
-			return is_subclass_of($class1, $class2);
-		}
-		elseif (is_string($class1) && is_string($class2))
-		{
-			if (class_exists($class1))
-			{
-				if (class_exists($class2))
-				{
-					$class2 = strtolower($class2);
-					while ($class1 = strtolower(get_parent_class($class1)))
-					{
-						if ($class1 === $class2)
-						{
-							return true;
-						}
-					}
-				}
-			}
-			else
-			{
-				trigger_error('Unknown class passed as parameter', E_USER_WARNNG);
-			}
-		}
-		return false;
+		return is_subclass_of($class1, $class2);
 	}
 
 	/**
