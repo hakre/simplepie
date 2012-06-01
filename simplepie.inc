@@ -2389,7 +2389,7 @@ class SimplePie
 
 		if (!empty($categories))
 		{
-			return SimplePie_Misc::array_unique($categories);
+			return array_unique($categories);
 		}
 		else
 		{
@@ -2472,7 +2472,7 @@ class SimplePie
 
 		if (!empty($authors))
 		{
-			return SimplePie_Misc::array_unique($authors);
+			return array_unique($authors);
 		}
 		else
 		{
@@ -2543,7 +2543,7 @@ class SimplePie
 
 		if (!empty($contributors))
 		{
-			return SimplePie_Misc::array_unique($contributors);
+			return array_unique($contributors);
 		}
 		else
 		{
@@ -3365,7 +3365,7 @@ class SimplePie_Item
 
 		if (!empty($categories))
 		{
-			return SimplePie_Misc::array_unique($categories);
+			return array_unique($categories);
 		}
 		else
 		{
@@ -3449,7 +3449,7 @@ class SimplePie_Item
 
 		if (!empty($contributors))
 		{
-			return SimplePie_Misc::array_unique($contributors);
+			return array_unique($contributors);
 		}
 		else
 		{
@@ -3523,7 +3523,7 @@ class SimplePie_Item
 
 		if (!empty($authors))
 		{
-			return SimplePie_Misc::array_unique($authors);
+			return array_unique($authors);
 		}
 		elseif (($source = $this->get_source()) && ($authors = $source->get_authors()))
 		{
@@ -3865,7 +3865,7 @@ class SimplePie_Item
 			}
 			if (is_array($captions_parent))
 			{
-				$captions_parent = array_values(SimplePie_Misc::array_unique($captions_parent));
+				$captions_parent = array_values(array_unique($captions_parent));
 			}
 
 			// CATEGORIES
@@ -3940,7 +3940,7 @@ class SimplePie_Item
 			}
 			if (is_array($categories_parent))
 			{
-				$categories_parent = array_values(SimplePie_Misc::array_unique($categories_parent));
+				$categories_parent = array_values(array_unique($categories_parent));
 			}
 
 			// COPYRIGHT
@@ -4028,7 +4028,7 @@ class SimplePie_Item
 			}
 			if (is_array($credits_parent))
 			{
-				$credits_parent = array_values(SimplePie_Misc::array_unique($credits_parent));
+				$credits_parent = array_values(array_unique($credits_parent));
 			}
 
 			// DESCRIPTION
@@ -4120,7 +4120,7 @@ class SimplePie_Item
 			}
 			if (is_array($hashes_parent))
 			{
-				$hashes_parent = array_values(SimplePie_Misc::array_unique($hashes_parent));
+				$hashes_parent = array_values(array_unique($hashes_parent));
 			}
 
 			// KEYWORDS
@@ -4174,7 +4174,7 @@ class SimplePie_Item
 			}
 			if (is_array($keywords_parent))
 			{
-				$keywords_parent = array_values(SimplePie_Misc::array_unique($keywords_parent));
+				$keywords_parent = array_values(array_unique($keywords_parent));
 			}
 
 			// PLAYER
@@ -4264,7 +4264,7 @@ class SimplePie_Item
 			}
 			if (is_array($ratings_parent))
 			{
-				$ratings_parent = array_values(SimplePie_Misc::array_unique($ratings_parent));
+				$ratings_parent = array_values(array_unique($ratings_parent));
 			}
 
 			// RESTRICTIONS
@@ -4342,7 +4342,7 @@ class SimplePie_Item
 			}
 			if (is_array($restrictions_parent))
 			{
-				$restrictions_parent = array_values(SimplePie_Misc::array_unique($restrictions_parent));
+				$restrictions_parent = array_values(array_unique($restrictions_parent));
 			}
 
 			// THUMBNAILS
@@ -4547,7 +4547,7 @@ class SimplePie_Item
 								}
 								if (is_array($captions))
 								{
-									$captions = array_values(SimplePie_Misc::array_unique($captions));
+									$captions = array_values(array_unique($captions));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['text']))
@@ -4583,7 +4583,7 @@ class SimplePie_Item
 								}
 								if (is_array($captions))
 								{
-									$captions = array_values(SimplePie_Misc::array_unique($captions));
+									$captions = array_values(array_unique($captions));
 								}
 							}
 							else
@@ -4646,15 +4646,15 @@ class SimplePie_Item
 							}
 							if (is_array($categories) && is_array($categories_parent))
 							{
-								$categories = array_values(SimplePie_Misc::array_unique(array_merge($categories, $categories_parent)));
+								$categories = array_values(array_unique(array_merge($categories, $categories_parent)));
 							}
 							elseif (is_array($categories))
 							{
-								$categories = array_values(SimplePie_Misc::array_unique($categories));
+								$categories = array_values(array_unique($categories));
 							}
 							elseif (is_array($categories_parent))
 							{
-								$categories = array_values(SimplePie_Misc::array_unique($categories_parent));
+								$categories = array_values(array_unique($categories_parent));
 							}
 
 							// COPYRIGHTS
@@ -4719,7 +4719,7 @@ class SimplePie_Item
 								}
 								if (is_array($credits))
 								{
-									$credits = array_values(SimplePie_Misc::array_unique($credits));
+									$credits = array_values(array_unique($credits));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['credit']))
@@ -4749,7 +4749,7 @@ class SimplePie_Item
 								}
 								if (is_array($credits))
 								{
-									$credits = array_values(SimplePie_Misc::array_unique($credits));
+									$credits = array_values(array_unique($credits));
 								}
 							}
 							else
@@ -4794,7 +4794,7 @@ class SimplePie_Item
 								}
 								if (is_array($hashes))
 								{
-									$hashes = array_values(SimplePie_Misc::array_unique($hashes));
+									$hashes = array_values(array_unique($hashes));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['hash']))
@@ -4819,7 +4819,7 @@ class SimplePie_Item
 								}
 								if (is_array($hashes))
 								{
-									$hashes = array_values(SimplePie_Misc::array_unique($hashes));
+									$hashes = array_values(array_unique($hashes));
 								}
 							}
 							else
@@ -4841,7 +4841,7 @@ class SimplePie_Item
 								}
 								if (is_array($keywords))
 								{
-									$keywords = array_values(SimplePie_Misc::array_unique($keywords));
+									$keywords = array_values(array_unique($keywords));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['keywords']))
@@ -4857,7 +4857,7 @@ class SimplePie_Item
 								}
 								if (is_array($keywords))
 								{
-									$keywords = array_values(SimplePie_Misc::array_unique($keywords));
+									$keywords = array_values(array_unique($keywords));
 								}
 							}
 							else
@@ -4902,7 +4902,7 @@ class SimplePie_Item
 								}
 								if (is_array($ratings))
 								{
-									$ratings = array_values(SimplePie_Misc::array_unique($ratings));
+									$ratings = array_values(array_unique($ratings));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['rating']))
@@ -4927,7 +4927,7 @@ class SimplePie_Item
 								}
 								if (is_array($ratings))
 								{
-									$ratings = array_values(SimplePie_Misc::array_unique($ratings));
+									$ratings = array_values(array_unique($ratings));
 								}
 							}
 							else
@@ -4959,7 +4959,7 @@ class SimplePie_Item
 								}
 								if (is_array($restrictions))
 								{
-									$restrictions = array_values(SimplePie_Misc::array_unique($restrictions));
+									$restrictions = array_values(array_unique($restrictions));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['restriction']))
@@ -4985,7 +4985,7 @@ class SimplePie_Item
 								}
 								if (is_array($restrictions))
 								{
-									$restrictions = array_values(SimplePie_Misc::array_unique($restrictions));
+									$restrictions = array_values(array_unique($restrictions));
 								}
 							}
 							else
@@ -5002,7 +5002,7 @@ class SimplePie_Item
 								}
 								if (is_array($thumbnails))
 								{
-									$thumbnails = array_values(SimplePie_Misc::array_unique($thumbnails));
+									$thumbnails = array_values(array_unique($thumbnails));
 								}
 							}
 							elseif (isset($group['child'][SIMPLEPIE_NAMESPACE_MEDIARSS]['thumbnail']))
@@ -5013,7 +5013,7 @@ class SimplePie_Item
 								}
 								if (is_array($thumbnails))
 								{
-									$thumbnails = array_values(SimplePie_Misc::array_unique($thumbnails));
+									$thumbnails = array_values(array_unique($thumbnails));
 								}
 							}
 							else
@@ -5171,7 +5171,7 @@ class SimplePie_Item
 							}
 							if (is_array($captions))
 							{
-								$captions = array_values(SimplePie_Misc::array_unique($captions));
+								$captions = array_values(array_unique($captions));
 							}
 						}
 						else
@@ -5208,15 +5208,15 @@ class SimplePie_Item
 						}
 						if (is_array($categories) && is_array($categories_parent))
 						{
-							$categories = array_values(SimplePie_Misc::array_unique(array_merge($categories, $categories_parent)));
+							$categories = array_values(array_unique(array_merge($categories, $categories_parent)));
 						}
 						elseif (is_array($categories))
 						{
-							$categories = array_values(SimplePie_Misc::array_unique($categories));
+							$categories = array_values(array_unique($categories));
 						}
 						elseif (is_array($categories_parent))
 						{
-							$categories = array_values(SimplePie_Misc::array_unique($categories_parent));
+							$categories = array_values(array_unique($categories_parent));
 						}
 						else
 						{
@@ -5271,7 +5271,7 @@ class SimplePie_Item
 							}
 							if (is_array($credits))
 							{
-								$credits = array_values(SimplePie_Misc::array_unique($credits));
+								$credits = array_values(array_unique($credits));
 							}
 						}
 						else
@@ -5312,7 +5312,7 @@ class SimplePie_Item
 							}
 							if (is_array($hashes))
 							{
-								$hashes = array_values(SimplePie_Misc::array_unique($hashes));
+								$hashes = array_values(array_unique($hashes));
 							}
 						}
 						else
@@ -5334,7 +5334,7 @@ class SimplePie_Item
 							}
 							if (is_array($keywords))
 							{
-								$keywords = array_values(SimplePie_Misc::array_unique($keywords));
+								$keywords = array_values(array_unique($keywords));
 							}
 						}
 						else
@@ -5375,7 +5375,7 @@ class SimplePie_Item
 							}
 							if (is_array($ratings))
 							{
-								$ratings = array_values(SimplePie_Misc::array_unique($ratings));
+								$ratings = array_values(array_unique($ratings));
 							}
 						}
 						else
@@ -5407,7 +5407,7 @@ class SimplePie_Item
 							}
 							if (is_array($restrictions))
 							{
-								$restrictions = array_values(SimplePie_Misc::array_unique($restrictions));
+								$restrictions = array_values(array_unique($restrictions));
 							}
 						}
 						else
@@ -5424,7 +5424,7 @@ class SimplePie_Item
 							}
 							if (is_array($thumbnails))
 							{
-								$thumbnails = array_values(SimplePie_Misc::array_unique($thumbnails));
+								$thumbnails = array_values(array_unique($thumbnails));
 							}
 						}
 						else
@@ -5558,7 +5558,7 @@ class SimplePie_Item
 				$this->data['enclosures'][] = new $this->feed->enclosure_class($url, $type, $length, $this->feed->javascript, $bitrate, $captions_parent, $categories_parent, $channels, $copyrights_parent, $credits_parent, $description_parent, $duration_parent, $expression, $framerate, $hashes_parent, $height, $keywords_parent, $lang, $medium, $player_parent, $ratings_parent, $restrictions_parent, $samplingrate, $thumbnails_parent, $title_parent, $width);
 			}
 
-			$this->data['enclosures'] = array_values(SimplePie_Misc::array_unique($this->data['enclosures']));
+			$this->data['enclosures'] = array_values(array_unique($this->data['enclosures']));
 		}
 		if (!empty($this->data['enclosures']))
 		{
@@ -5860,7 +5860,7 @@ class SimplePie_Source
 
 		if (!empty($categories))
 		{
-			return SimplePie_Misc::array_unique($categories);
+			return array_unique($categories);
 		}
 		else
 		{
@@ -5943,7 +5943,7 @@ class SimplePie_Source
 
 		if (!empty($authors))
 		{
-			return SimplePie_Misc::array_unique($authors);
+			return array_unique($authors);
 		}
 		else
 		{
@@ -6014,7 +6014,7 @@ class SimplePie_Source
 
 		if (!empty($contributors))
 		{
-			return SimplePie_Misc::array_unique($contributors);
+			return array_unique($contributors);
 		}
 		else
 		{
@@ -11079,44 +11079,8 @@ class SimplePie_Misc
 
 	static function array_unique($array)
 	{
-		if (version_compare(PHP_VERSION, '5.2', '>='))
-		{
-			return array_unique($array);
-		}
-		else
-		{
-			$array = (array) $array;
-			$new_array = array();
-			$new_array_strings = array();
-			foreach ($array as $key => $value)
-			{
-				if (is_object($value))
-				{
-					if (method_exists($value, '__toString'))
-					{
-						$cmp = $value->__toString();
-					}
-					else
-					{
-						trigger_error('Object of class ' . get_class($value) . ' could not be converted to string', E_USER_ERROR);
-					}
-				}
-				elseif (is_array($value))
-				{
-					$cmp = (string) reset($value);
-				}
-				else
-				{
-					$cmp = (string) $value;
-				}
-				if (!in_array($cmp, $new_array_strings))
-				{
-					$new_array[$key] = $value;
-					$new_array_strings[] = $cmp;
-				}
-			}
-			return $new_array;
-		}
+		trigger_error(__FUNCTION__ . ' is deprecated. Please use array_unique directly.', E_USER_NOTICE);
+		return array_unique($array);
 	}
 
 	/**
