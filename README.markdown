@@ -6,6 +6,12 @@ This is the legacy 1.2.x version with legacy PHP 5 support.
 
 PHP Version: 5.2.x
 
+## Upgrading SimplePie 1.2.x to PHP 5
+
+* Check if you still use `SIMPLEPIE_PHP5` constant (bool) in your code, you might want to
+  remove / change that code. This constant is not defined any longer by this package, you
+  can replace it with PHP's `true` constant.
+
 ## Authors and contributors
 
 ### Current

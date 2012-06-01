@@ -354,11 +354,6 @@ define('SIMPLEPIE_NAMESPACE_XHTML', 'http://www.w3.org/1999/xhtml');
 define('SIMPLEPIE_IANA_LINK_RELATIONS_REGISTRY', 'http://www.iana.org/assignments/relation/');
 
 /**
- * Whether we're running on PHP5
- */
-define('SIMPLEPIE_PHP5', version_compare(PHP_VERSION, '5.0.0', '>='));
-
-/**
  * No file source
  */
 define('SIMPLEPIE_FILE_SOURCE_NONE', 0);
@@ -1809,15 +1804,7 @@ class SimplePie
 			$this->multifeed_objects = array();
 			foreach ($this->multifeed_url as $url)
 			{
-				if (SIMPLEPIE_PHP5)
-				{
-					// This keyword needs to defy coding standards for PHP4 compatibility
-					$this->multifeed_objects[$i] = clone($this);
-				}
-				else
-				{
-					$this->multifeed_objects[$i] = $this;
-				}
+				$this->multifeed_objects[$i] = clone $this;
 				$this->multifeed_objects[$i]->set_feed_url($url);
 				$success |= $this->multifeed_objects[$i]->init();
 				$i++;
@@ -8888,11 +8875,7 @@ class SimplePie_Cache_MySQL extends SimplePie_Cache_DB
 
 			if (is_a($data, 'SimplePie'))
 			{
-				if (SIMPLEPIE_PHP5)
-				{
-					// This keyword needs to defy coding standards for PHP4 compatibility
-					$data = clone($data);
-				}
+				$data = clone $data;
 
 				$prepared = $this->prepare_simplepie_object_for_cache($data);
 
