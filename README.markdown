@@ -1,6 +1,8 @@
 # SimplePie
 
-Feed library for PHP. This is the legacy 1.2.x version with legacy PHP 5 support.
+A simple Atom/RSS parsing library for PHP.
+
+This is the legacy 1.2.x version with legacy PHP 5 support.
 
 PHP Version: 5.2.x
 
@@ -27,6 +29,13 @@ For a complete list of contributors:
 
 [BSD-3-Clause](http://spdx.org/licenses/BSD-3-Clause), see LICENSE.txt
 
+Parts of this software are licensed under different licenses:
+
+ * For idn: [LGPL-2.1+](http://spdx.org/licenses/LGPL-2.1+)
+ * For test: ([Zlib](http://spdx.org/licenses/Zlib) or [LGPL-2.1+](http://spdx.org/licenses/LGPL-2.1+))
+ * For IPv6: [BSD-2-Clause](http://spdx.org/licenses/BSD-2-Clause)
+
+
 ## Project status
 
 SimplePie is currently maintained by Ryan McCue.
@@ -41,7 +50,7 @@ If you're interested in getting involved with SimplePie, please get in touch wit
 2. `README.markdown` - This document.
 3. `LICENSE.txt` - A copy of the BSD license.
 4. `compatibility_test/` - The SimplePie compatibility test that checks your server for required settings.
-5. `demo/` - A basic feed reader demo that shows off some of SimplePie's more noticable features.
+5. `demo/` - A basic feed reader demo that shows off some of SimplePie's more noticeable features.
 6. `idn/` - A third-party library that SimplePie can optionally use to understand Internationalized Domain Names (IDNs).
 7. `test/` - SimplePie's unit test suite.
 
@@ -63,3 +72,9 @@ For bug reports and feature requests, visit:
 
 Support mailing list -- powered by users, for users.
 [http://tech.groups.yahoo.com/group/simplepie-support/](http://tech.groups.yahoo.com/group/simplepie-support/)
+
+
+## Development Information
+
+* Indent: 4; Tab size: 4; Use: Tabs
+
