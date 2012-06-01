@@ -17,10 +17,17 @@ class SimplePie_Unit_Test2_Group extends Unit_Test2_Group
 		{
 			ob_end_clean();
 		}
-		
-		$passed_percentage = floor($this->passes() / $this->total() * 100);
-		$failed_percentage = ceil($this->fails() / $this->total() * 100);
-		
+
+		if (0 == $total = $this->total())
+		{
+			$passed_percentage = $failed_percentage = 0;
+		}
+		else
+		{
+			$passed_percentage = floor($this->passes() / $total * 100);
+			$failed_percentage = ceil($this->fails() / $total * 100);
+		}
+
 		echo '<h2 class=' . (($passed_percentage == 100) ? 'pass' : 'fail') . '>' . htmlspecialchars($this->name(), ENT_COMPAT, 'UTF-8') . ': ' . $passed_percentage . "% passed!</h2>\n";
 		echo "<p>\n$output\n</p>\n";
 		echo '<p>We ran ' . $this->total() . ' tests in ' . round($this->time(), 3) . ' seconds of which ' . $this->passes() . ' passed, and ' . $this->fails() . ' failed.</p>';
